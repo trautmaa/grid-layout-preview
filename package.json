@@ -16,7 +16,8 @@
 		"prepublishOnly": "yarn test && yarn lint",
 		"preversion": "yarn lint",
 		"version": "yarn format && git add -A src",
-		"postversion": "git push && git push --tags"
+		"postversion": "git push && git push --tags",
+		"dev": "yalc publish && watch 'yarn build && yalc push' src"
 	},
 	"repository": {
 		"type": "git",
