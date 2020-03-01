@@ -37,4 +37,4 @@ const App: React.FC() {
 }
 ```
 
-![BitMEX UI](http://i.imgur.com/oo1NT6c.gif)
+![Grid Layout Preview](https://raw.githubusercontent.com/trautmaa/grid-layout-preview/master/assets/GridLayoutPreview.png)
