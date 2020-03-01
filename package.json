@@ -8,7 +8,7 @@
 	"types": "build/index.d.ts",
 	"files": [ "build/**/*" ],
 	"scripts": {
-		"test": "jest --config jestconfig.json",
+		"test": "jest --config jestconfig.json --coverage",
 		"build": "rollup -c",
 		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
 		"lint": "tslint -p tsconfig.json",
@@ -48,7 +48,6 @@
 		"rollup-plugin-node-resolve": "^5.2.0",
 		"rollup-plugin-peer-deps-external": "^2.2.2",
 		"rollup-plugin-typescript2": "^0.26.0",
-		"styled-components": "^5.0.1",
 		"tslint": "^6.0.0",
 		"tslint-config-prettier": "^1.18.0",
 		"typescript": "^3.8.3"

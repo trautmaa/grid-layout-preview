@@ -1,8 +1,6 @@
-import { transform, genX, genW } from './math';
-
-const base = 500;
-const padding = 5;
-const baseColumns = 12;
+import { transform, generateX, generateW, generateH } from './math';
+import { CONFIG_CONSTANTS } from '../config';
+const { base, padding } = CONFIG_CONSTANTS;
 
 describe('transform', () => {
 	it('should convert columns to proper width', () => {
@@ -16,23 +14,35 @@ describe('transform', () => {
 	});
 });
 
-describe('genX', () => {
+describe('generateX', () => {
 	it('should generate x dimension incorporating padding', () => {
-		expect(genX(0, padding, baseColumns, base)).toEqual(padding);
+		expect(generateX(0, CONFIG_CONSTANTS)).toEqual(padding);
 	});
-	it('should generate x dimension incorporating padding', () => {
-		expect(genX(6, padding, baseColumns, base)).toEqual('255');
+	it('should generate x dimension incorporating padding at column 6', () => {
+		expect(generateX(6, CONFIG_CONSTANTS)).toEqual('257');
 	});
 });
 
-describe('genW', () => {
+describe('generateW', () => {
 	it('should generate width incorporating padding', () => {
-		expect(genW(0, padding, baseColumns, base)).toEqual(0);
+		expect(generateW(0, CONFIG_CONSTANTS)).toEqual(0);
 	});
 	it('should generate width incorporating padding', () => {
-		expect(genW(6, padding, baseColumns, base)).toEqual('240');
+		expect(generateW(6, CONFIG_CONSTANTS)).toEqual('236');
 	});
 	it('should generate width incorporating padding', () => {
-		expect(genW(12, padding, baseColumns, base)).toEqual('490');
+		expect(generateW(12, CONFIG_CONSTANTS)).toEqual('486');
+	});
+});
+
+describe('generateH', () => {
+	it('should generate width incorporating padding', () => {
+		expect(generateH(0, CONFIG_CONSTANTS)).toEqual(0);
+	});
+	it('should generate width incorporating padding', () => {
+		expect(generateH(6, CONFIG_CONSTANTS)).toEqual('236');
+	});
+	it('should generate width incorporating padding', () => {
+		expect(generateH(12, CONFIG_CONSTANTS)).toEqual('486');
 	});
 });

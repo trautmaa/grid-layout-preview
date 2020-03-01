@@ -1,8 +1,9 @@
 import * as React from 'react';
-import Hello from '..';
+import MiniGridLayout from '..';
 import { render } from '@testing-library/react';
+import { testLayout } from '../__mocks__/layouts';
 
-test("Component should show 'red' text 'Hello World'", () => {
-	const { getByText } = render(<Hello text="alex" />);
-	expect(getByText(/Hello alex/)).toBeTruthy();
+test('it should render', () => {
+	const { container } = render(<MiniGridLayout layout={testLayout} />);
+	expect(container).toBeTruthy();
 });
