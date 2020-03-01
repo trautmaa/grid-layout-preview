@@ -36,13 +36,13 @@ describe('generateW', () => {
 });
 
 describe('generateH', () => {
-	it('should generate width incorporating padding', () => {
+	it('should generate height incorporating padding for height zero', () => {
 		expect(generateH(0, CONFIG_CONSTANTS)).toEqual(0);
 	});
-	it('should generate width incorporating padding', () => {
+	it('should generate height incorporating padding', () => {
 		expect(generateH(6, CONFIG_CONSTANTS)).toEqual('236');
 	});
-	it('should generate width incorporating padding', () => {
+	it('should generate height incorporating padding', () => {
 		expect(generateH(12, CONFIG_CONSTANTS)).toEqual('486');
 	});
 });

@@ -25,7 +25,7 @@ export const generateW = (cols: ColumnOptions, options: ConfigOptions) => {
 export const generateH = (height: number, options: ConfigOptions) => {
 	const { padding, baseColumns, base } = options;
 	if (height === 0) {
-		return padding;
+		return 0;
 	}
 	return s(transform(height, baseColumns, base) - padding * 2);
 };
